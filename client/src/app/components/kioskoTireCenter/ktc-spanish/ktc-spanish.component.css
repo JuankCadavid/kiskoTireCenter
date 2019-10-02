@@ -1,0 +1,190 @@
+@media screen and (max-width: 1400px) and (orientation:landscape) {
+    .centerOne {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 220px;
+        height: 150px;
+    }
+    .centerTwo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 230px;
+        height: 200px;
+    }
+    .header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 70%;
+        height: auto;
+    }
+    video {
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 550px;
+        height: auto;
+    }
+    /* Carousel */
+    #carouselAdvertising {
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 565px;
+        height: auto;
+    }
+    #itemsAdvertising {
+        display: none;
+    }
+    #titleAdvertising {
+        display: none;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .centerOne {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 420px;
+        height: 350px;
+    }
+    .centerTwo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 300px;
+    }
+    video {
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        height: auto;
+    }
+    #imgAdversiting {
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 550px;
+        height: 320px;
+    }
+    #imgAdversiting:hover {
+        -ms-transform: scale(1.5);
+        /* IE 9 */
+        -webkit-transform: scale(1.5);
+        /* Safari 3-8 */
+        transform: scale(1.5);
+    }
+    .header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 70%;
+        height: auto;
+    }
+    .card-body #cardPublicidad {
+        width: 180px;
+        height: 300px;
+        padding: 0;
+    }
+    .col-md-2 {
+        padding: 0;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    #titleAdvertising {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        font-size: 40px;
+        text-align: center;
+    }
+    /* Carousel */
+    #carouselAdvertising {
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 615px;
+        height: auto;
+    }
+    video::-webkit-media-controls-fullscreen-button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .centerOne {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 420px;
+        height: 350px;
+    }
+    .centerTwo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 300px;
+    }
+    video {
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 580px;
+        height: auto;
+    }
+    #imgAdversiting {
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 550px;
+        height: 320px;
+    }
+    #imgAdversiting:hover {
+        -ms-transform: scale(1.5);
+        /* IE 9 */
+        -webkit-transform: scale(1.5);
+        /* Safari 3-8 */
+        transform: scale(1.5);
+    }
+    .header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 70%;
+        height: auto;
+    }
+    #titleAdvertising {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        font-size: 35px;
+        text-align: center;
+    }
+    /* Carousel */
+    #carouselAdvertising {
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 595px;
+        height: auto;
+    }
+    video::-webkit-media-controls-fullscreen-button {
+        display: none;
+    }
+}
