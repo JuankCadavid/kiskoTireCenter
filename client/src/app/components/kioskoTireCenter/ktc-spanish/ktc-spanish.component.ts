@@ -3,7 +3,7 @@ import { KioskoTireCenterService } from '../../../services/kiosko-tire-center.se
 import { modelParamBatery } from '../../../models/modelParamBatery';
 import { battery, modelAudit } from '../../../models/modelParamBatery';
 import { modeladvertising } from '../../../models/modelAdvertising';
-import { timer } from 'rxjs';
+import { timer, empty } from 'rxjs';
 import { Dropdown } from "primeng/components/dropdown/dropdown";
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -36,10 +36,10 @@ export class KtcSpanishComponent implements OnInit {
   mySlideOptions = {
     items: 1,
     nav: false,
-    loop:true,
+    loop: true,
     dots: false,
-    margin:10,
-    center:true,
+    margin: 10,
+    center: true,
     autoplay: true,
     autoplayTimeout: 200000,
     autoplayHoverPause: true
@@ -72,8 +72,17 @@ export class KtcSpanishComponent implements OnInit {
     descripcion_corta: '',
     detalle: '',
     tipo: '',
-    marca:''
-
+    marca: '',
+    c1: '',
+    c2: '',
+    c3: '',
+    c4: '',
+    c5: '',
+    c6: '',
+    c7: '',
+    c8: '',
+    c9: '',
+    c10: ''
   }
 
   //Model for insert audit
@@ -125,11 +134,13 @@ export class KtcSpanishComponent implements OnInit {
 
   getBatery() {
 
-    if (this.bateryValue.idModelo == 0) {
+    if (this.bateryValue.idMarca == 0) {
+      window.alert('Seleccione la marca de su vehiculo')
+    } else if (this.bateryValue.idModelo == 0) {
       window.alert('Seleccione el modelo de su vehiculo')
     }
-
-    this.timeLeft = 80
+    this.pauseTimer();
+    this.timeLeft = 80;
     this.startTimer();
 
     this.kioskoservice.getBatery(this.bateryValue).subscribe(
@@ -154,6 +165,7 @@ export class KtcSpanishComponent implements OnInit {
     const abc = source.subscribe(val => {
       console.log(val, '-');
       this.subscribeTimer = this.timeLeft - val;
+
     });
   }
 
@@ -198,15 +210,29 @@ export class KtcSpanishComponent implements OnInit {
 
   //Modal advertising
   showModalAdvertising(producto: any, modal) {
-
-    this.timeLeft = 80
+    this.pauseTimer();
+    this.timeLeft = 80;
     this.startTimer();
+
+
+
 
     this.Madvertising.id_item_publicidad = producto.id_item_publicidad;
     this.Madvertising.descripcion_corta = producto.descripcion_corta;
     this.Madvertising.detalle = producto.detalle;
     this.Madvertising.tipo = producto.tipo;
     this.Madvertising.marca = producto.marca;
+
+    this.Madvertising.c1 = producto.c1;
+    this.Madvertising.c2 = producto.c2;
+    this.Madvertising.c3 = producto.c3;
+    this.Madvertising.c4 = producto.c4;
+    this.Madvertising.c5 = producto.c6;
+    this.Madvertising.c7 = producto.c7;
+    this.Madvertising.c8 = producto.c8;
+    this.Madvertising.c9 = producto.c9;
+    this.Madvertising.c10 = producto.c10;
+
 
     this.modalService.open(modal);
 
@@ -220,7 +246,6 @@ export class KtcSpanishComponent implements OnInit {
   putAudit(audit: modelAudit) {
     this.kioskoservice.putAudit(audit).subscribe(
       res => {
-        console.log(res);
 
       }, err => console.error(err)
     )
@@ -233,10 +258,10 @@ export class KtcSpanishComponent implements OnInit {
 
         this.itemsPublicidad = res;
 
+        console.log(this.itemsPublicidad);
+
+
         this.myAdvertising = this.itemsPublicidad.map((i) => `assets/Publicidad/${i.id_item_publicidad}`);
-
-
-        console.log(this.myAdvertising);
 
 
       }, err => console.error(err)

@@ -28,6 +28,21 @@
         width: 550px;
         height: auto;
     }
+    #imgAdversiting {
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 550px;
+        height: 320px;
+    }
+    #imgAdversiting:hover {
+        -ms-transform: scale(1.5);
+        /* IE 9 */
+        -webkit-transform: scale(1.5);
+        /* Safari 3-8 */
+        transform: scale(1.5);
+    }
     /* Carousel */
     #carouselAdvertising {
         border-radius: 10px;
@@ -50,15 +65,15 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 420px;
-        height: 350px;
+        width: 270px;
+        height: 200px;
     }
     .centerTwo {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 300px;
-        height: 300px;
+        height: 250px;
     }
     video {
         border-radius: 10px;
@@ -135,7 +150,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 300px;
-        height: 300px;
+        height: 250px;
     }
     video {
         border-radius: 10px;

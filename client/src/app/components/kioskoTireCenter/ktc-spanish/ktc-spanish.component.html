@@ -6,7 +6,7 @@
   <div class="card shadow mb-4" style="border-radius: 10px; margin-top:10px ;width: 500px;margin: 0 auto; float: none;">
 
     <div class="card-header py-3  text-center" style="background:#2256a0;border-radius: 5px">
-      <h6 class="m-0 font-weight-bold text-white">ENCUENTRE LA BATERIA PARA SU VEHICULO </h6>
+      <h5 class="m-0 font-weight-bold text-white">ENCUENTRE LA BATERIA PARA SU VEHICULO </h5>
     </div>
 
     <div class="card-body">
@@ -100,11 +100,12 @@
             <div class="card text-center" style="border: 0cm;">
               <div class="card-body text-center" style="border: 0cm;padding: 0px">
 
-                <video controls autoplay>
-                  <source src="assets/Videos/BATERIAS OPTIMA la ultima generacion de baterías. En español.mp4"
-                    type="video/mp4">
+                <video controls>
+                  <source src="assets/Videos/1.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
+
+
               </div>
             </div>
           </div>
@@ -112,26 +113,11 @@
 
         <div class="item">
 
-            <div class="col-md-3" id="cardPublicidad">
-              <div class="card text-center" style="border: 0cm;">
-                <div class="card-body text-center" style="border: 0cm;padding: 0px">
-  
-                    <img id="imgAdversiting" class="centerOne" src="assets/Publicidad/Arte/1.jpg">
-                </div>
-              </div>
-            </div>
-          </div>
-
-        <div class="item">
-
           <div class="col-md-3" id="cardPublicidad">
             <div class="card text-center" style="border: 0cm;">
               <div class="card-body text-center" style="border: 0cm;padding: 0px">
 
-                <video controls>
-                  <source src="assets/Videos/1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <img id="imgAdversiting" class="centerOne" src="assets/Publicidad/Arte/1.jpg">
               </div>
             </div>
           </div>
@@ -145,6 +131,21 @@
 
                 <video controls>
                   <source src="assets/Videos/2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+
+          <div class="col-md-3" id="cardPublicidad">
+            <div class="card text-center" style="border: 0cm;">
+              <div class="card-body text-center" style="border: 0cm;padding: 0px">
+
+                <video controls>
+                  <source src="assets/Videos/3.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -237,10 +238,23 @@
     <hr>
     <div> <strong>Descripcion:</strong> {{Madvertising.descripcion_corta}}</div>
     <div> <strong>Marca:</strong> {{Madvertising.marca}}</div>
-    <div> <strong style="color: red">Item #:</strong> {{Madvertising.id_item_publicidad}} <i
+    <div> <strong style="color: red">Item #:</strong> {{Madvertising.id_item_publicidad}}<i
         class="fas fa-car-battery"></i></div>
     <hr>
-    <div style="text-align: center"> <strong style="color:#2256a0"><img src="assets/star.png" style="width:20px;height: 20px; "> Encuentre este
+    <h5> <strong>Caracteristicas</strong></h5>
+    <li type="disc" *ngIf="Madvertising.c1">{{Madvertising.c1}}</li>
+    <li type="disc" *ngIf="Madvertising.c2">{{Madvertising.c2}}</li>
+    <li type="disc" *ngIf="Madvertising.c3">{{Madvertising.c3}}</li>
+    <li type="disc" *ngIf="Madvertising.c4">{{Madvertising.c4}}</li>
+    <li type="disc" *ngIf="Madvertising.c5">{{Madvertising.c5}}</li>
+    <li type="disc" *ngIf="Madvertising.c6">{{Madvertising.c6}}</li>
+    <li type="disc" *ngIf="Madvertising.c7">{{Madvertising.c7}}</li>
+    <li type="disc" *ngIf="Madvertising.c8">{{Madvertising.c8}}</li>
+    <li type="disc" *ngIf="Madvertising.c9">{{Madvertising.c9}}</li>
+    <li type="disc" *ngIf="Madvertising.c10">{{Madvertising.c10}}</li>
+    <hr>
+    <div style="text-align: center"> <strong style="color:#2256a0"><img src="assets/star.png"
+          style="width:20px;height: 20px; "> Encuentre este
         producto en la seccion de vehiculos del Club. <img src="assets/star.png"
           style="width:20px;height: 20px; "></strong></div>
 
