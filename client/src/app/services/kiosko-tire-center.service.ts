@@ -11,7 +11,7 @@ import { modelAudit } from '../models/modelParamBatery';
 })
 export class KioskoTireCenterService {
 
-  API_URI = 'http://localhost:3000/api';
+  API_URI = 'http://10.61.23.21:3000/api';
 
 
   constructor(private http: HttpClient) { }
@@ -28,7 +28,6 @@ export class KioskoTireCenterService {
   getBatery(paramBatery: modelParamBatery) {
     return this.http.post(`${this.API_URI}/kiosko/bateria`, paramBatery);
   }
-
 
   putAudit(audit: modelAudit) {
     

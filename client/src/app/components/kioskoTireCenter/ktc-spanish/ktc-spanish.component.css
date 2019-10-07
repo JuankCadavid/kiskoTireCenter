@@ -58,6 +58,28 @@
     #titleAdvertising {
         display: none;
     }
+
+
+    .loader {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        margin: -75px 0 0 -75px;
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+
 }
 
 @media screen and (orientation: portrait) {
@@ -135,6 +157,28 @@
     video::-webkit-media-controls-fullscreen-button {
         display: none;
     }
+
+
+    .loader {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        margin: -75px 0 0 -75px;
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+
 }
 
 @media screen and (min-width: 1800px) {
@@ -157,7 +201,7 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 580px;
+        width: 550px;
         height: auto;
     }
     #imgAdversiting {
@@ -169,11 +213,11 @@
         height: 320px;
     }
     #imgAdversiting:hover {
-        -ms-transform: scale(1.5);
+        -ms-transform: scale(1.3);
         /* IE 9 */
-        -webkit-transform: scale(1.5);
+        -webkit-transform: scale(1.3);
         /* Safari 3-8 */
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
     .header {
         display: block;
@@ -202,4 +246,25 @@
     video::-webkit-media-controls-fullscreen-button {
         display: none;
     }
+
+    .loader {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        margin: -75px 0 0 -75px;
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+
 }

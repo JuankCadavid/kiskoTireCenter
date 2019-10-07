@@ -54,9 +54,17 @@
 
 <hr style="background:#2256a0;height: 10px;">
 
+<div class="align-items-center text-center" *ngIf="spinner">
+  <div class="loader"></div>
+</div>
+
 <!-- Show Battery -->
 <section id="baterias" *ngIf="!publicidad">
   <div class="container-fluid" style="width: 90%" (mouseover)="timeLeft=80">
+
+      <button type="button" class="close" aria-label="Close" (click)="publicidad=true">
+          <span aria-hidden="true"><i class="fas fa-arrow-left"></i> Atras</span>
+        </button>
 
     <div class="row align-items-center justify-content-center">
 
@@ -171,7 +179,7 @@
             <div class="card-header d-flex justify-content-between align-items-center"
               style="border: 0cm;background-color: white">
             </div>
-            <img id="myImg" src="assets/Publicidad/{{publi.id_item_publicidad}}.jpg" style="width: 160px;height: 165px">
+            <img id="myImg" src="assets/Publicidad/{{publi.id_item_publicidad}}.jpg" style="width: 140px;height: 145px">
             <h5>{{publi.descripcion_corta}}</h5>
             <a class="btn btn-info" style="color: white"
               (click)="showModalAdvertising(publi, productsModaladvertising)">Ver
