@@ -98,6 +98,13 @@ export class KtcSpanishComponent implements OnInit {
   //Spinner
   spinner = false;
 
+
+  //Garanty Optima
+
+  garanty: boolean;
+  imgGaranty: number;
+  detail: string;
+
   constructor(private kioskoservice: KioskoTireCenterService, private modalService: NgbModal) {
 
     this.getBrands();
@@ -218,6 +225,30 @@ export class KtcSpanishComponent implements OnInit {
     this.Mbattery.Descripcion = producto.Descripcion;
     this.Mbattery.Marca = producto.Marca;
     this.Mbattery.Numero = producto.Numero;
+
+    if (this.Mbattery.Marca == 'OPTIMA') {
+
+      this.garanty = true;
+      this.detail = producto.Detalle;
+
+      if ((this.Mbattery.Numero == '18O') || (this.Mbattery.Numero == '17O')) {
+
+        this.imgGaranty = 1;
+
+      } else {
+
+        this.imgGaranty = 2;
+
+      }
+
+    } else {
+
+      this.garanty = false;
+      this.detail = '';
+
+    }
+
+
     this.modalService.open(modal);
 
   }

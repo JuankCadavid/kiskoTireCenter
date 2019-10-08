@@ -3,8 +3,8 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 220px;
-        height: 150px;
+        width: 200px;
+        height: 130px;
     }
     .centerTwo {
         display: block;
@@ -12,6 +12,13 @@
         margin-right: auto;
         width: 230px;
         height: 200px;
+    }
+    .centerThree {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 170px;
+        height: 180px;
     }
     .header {
         display: block;
@@ -43,6 +50,11 @@
         /* Safari 3-8 */
         transform: scale(1.5);
     }
+    .col-md-2 {
+        padding: 0;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
     /* Carousel */
     #carouselAdvertising {
         border-radius: 10px;
@@ -52,34 +64,37 @@
         width: 565px;
         height: auto;
     }
-    #itemsAdvertising {
-        display: none;
-    }
     #titleAdvertising {
-        display: none;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        font-size: 35px;
+        text-align: center;
     }
-
-
     .loader {
         position: absolute;
         z-index: 1;
         left: 50%;
         top: 50%;
         margin: -75px 0 0 -75px;
-        border: 16px solid #f3f3f3; /* Light grey */
-        border-top: 16px solid #3498db; /* Blue */
+        border: 16px solid #f3f3f3;
+        /* Light grey */
+        border-top: 16px solid #3498db;
+        /* Blue */
         border-radius: 50%;
         width: 120px;
         height: 120px;
         animation: spin 2s linear infinite;
-      }
-      
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-
-
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }
 
 @media screen and (orientation: portrait) {
@@ -96,6 +111,13 @@
         margin-right: auto;
         width: 300px;
         height: 250px;
+    }
+    .centerThree {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 160px;
+        height: 140px;
     }
     video {
         border-radius: 10px;
@@ -137,6 +159,10 @@
         flex: 0 0 25%;
         max-width: 25%;
     }
+    .col-md-3 {
+        flex: 0 0 41.6%;
+        max-width: 41.6%;
+    }
     #titleAdvertising {
         margin-top: 20px;
         margin-left: auto;
@@ -157,28 +183,29 @@
     video::-webkit-media-controls-fullscreen-button {
         display: none;
     }
-
-
     .loader {
         position: absolute;
         z-index: 1;
         left: 50%;
         top: 50%;
         margin: -75px 0 0 -75px;
-        border: 16px solid #f3f3f3; /* Light grey */
-        border-top: 16px solid #3498db; /* Blue */
+        border: 16px solid #f3f3f3;
+        /* Light grey */
+        border-top: 16px solid #3498db;
+        /* Blue */
         border-radius: 50%;
         width: 120px;
         height: 120px;
         animation: spin 2s linear infinite;
-      }
-      
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-
-
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }
 
 @media screen and (min-width: 1800px) {
@@ -186,8 +213,8 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 420px;
-        height: 350px;
+        width: 220px;
+        height: 150px;
     }
     .centerTwo {
         display: block;
@@ -195,6 +222,13 @@
         margin-right: auto;
         width: 300px;
         height: 250px;
+    }
+    .centerThree {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 140px;
+        height: 120px;
     }
     video {
         border-radius: 10px;
@@ -246,25 +280,27 @@
     video::-webkit-media-controls-fullscreen-button {
         display: none;
     }
-
     .loader {
         position: absolute;
         z-index: 1;
         left: 50%;
         top: 50%;
         margin: -75px 0 0 -75px;
-        border: 16px solid #f3f3f3; /* Light grey */
-        border-top: 16px solid #3498db; /* Blue */
+        border: 16px solid #f3f3f3;
+        /* Light grey */
+        border-top: 16px solid #3498db;
+        /* Blue */
         border-radius: 50%;
         width: 120px;
         height: 120px;
         animation: spin 2s linear infinite;
-      }
-      
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-
-
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }
