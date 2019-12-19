@@ -253,7 +253,7 @@ export class KtcSpanishComponent implements OnInit {
 
   }
 
-  //Modal advertising
+  //Modal Product advertising
   showModalAdvertising(producto: any, modal) {
 
     this.pauseTimer();
@@ -280,6 +280,18 @@ export class KtcSpanishComponent implements OnInit {
     this.modalService.open(modal);
 
   }
+
+
+    //Modal Product advertising
+    showModalAdvertisingOne(modal) {
+
+      this.pauseTimer();
+      this.timeLeft = 80;
+      this.startTimer();
+    
+      this.modalService.open(modal, { size: 'lg'});
+  
+    }
 
   closeModal(modal) {
     this.modalService.dismissAll(modal);

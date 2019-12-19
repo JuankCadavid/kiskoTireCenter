@@ -1,19 +1,19 @@
-<img src="assets/PriceSmart.png" style="width: 250px; height:110px;position: absolute;">
+<img class="logo" src="assets/PriceSmart.png">
 <!-- Menu search Battery -->
 <div class="container">
   <br>
 
-  <div class="card shadow mb-4" style="border-radius: 10px; margin-top:10px ;width: 500px;margin: 0 auto; float: none;">
+  <div id="cardFind" class="card shadow mb-4">
 
     <div class="card-header py-3  text-center" style="background:#2256a0;border-radius: 5px">
-      <h5 class="m-0 font-weight-bold text-white">ENCUENTRE LA BATERIA PARA SU VEHICULO </h5>
+      <h6 class="m-0 font-weight-bold text-white">ENCUENTRE LA BATERIA PARA SU VEHICULO </h6>
     </div>
 
     <div class="card-body">
 
       <div class="row justify-content-center">
         <div>
-          <h5>Marca</h5>
+          <h6>Marca</h6>
           <p-dropdown #ddMarca [options]="cars" [(ngModel)]="bateryValue.idMarca" [style]="{'width':'200px'}"
             (onChange)="getModels(bateryValue.idMarca)" filter="true" placeholder="Seleccione la marca">
             <ng-template let-item pTemplate="selectedItem">
@@ -32,7 +32,7 @@
 
       <div class="row justify-content-center py-3">
         <div>
-          <h5>Modelo</h5>
+          <h6>Modelo</h6>
           <p-dropdown #ddModelo [options]="model" [(ngModel)]="bateryValue.idModelo" [style]="{'width':'200px'}"
             placeholder="Seleccione un modelo" filter="true" (keyup.enter)="getBatery()">
           </p-dropdown>
@@ -40,9 +40,9 @@
       </div>
 
       <div class="row justify-content-center">
-        <button class="btn btn-success" style="margin-top: 20px;width: 200px; border-radius: 10px"
+        <button class="btn btn-success" style="margin-top: 20px;width: 180px; border-radius: 10px"
           (click)="getBatery()">
-          <h5>Buscar</h5>
+          <h6>Buscar</h6>
         </button>
       </div>
 
@@ -106,9 +106,23 @@
 
           <div class="col-md-3" id="cardPublicidad">
             <div class="card text-center" style="border: 0cm;">
+              <div class="card-body text-center" style="border: 0cm;padding: 0px;">
+
+                <img id="imgAdversiting" class="centerOne" src="assets/Publicidad/Arte/2.png"
+                  (click)="showModalAdvertisingOne(Modaladvertising)" style="cursor:pointer;">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="item">
+
+          <div class="col-md-3" id="cardPublicidad">
+            <div class="card text-center" style="border: 0cm;">
               <div class="card-body text-center" style="border: 0cm;padding: 0px">
 
-                <video autoplay controls>
+                <video controls>
                   <source src="assets/Videos/1.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -125,7 +139,8 @@
             <div class="card text-center" style="border: 0cm;">
               <div class="card-body text-center" style="border: 0cm;padding: 0px">
 
-                <img id="imgAdversiting" class="centerOne" src="assets/Publicidad/Arte/1.jpg">
+                <img id="imgAdversiting" class="centerOne" src="assets/Publicidad/Arte/1.jpg"
+                  (click)="showModalAdvertisingOne(ModaladvertisingOne)" style="cursor:pointer;">
               </div>
             </div>
           </div>
@@ -146,30 +161,16 @@
           </div>
         </div>
 
-        <div class="item">
-
-          <div class="col-md-3" id="cardPublicidad">
-            <div class="card text-center" style="border: 0cm;">
-              <div class="card-body text-center" style="border: 0cm;padding: 0px">
-
-                <video controls>
-                  <source src="assets/Videos/3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </owl-carousel>
     </div>
 
     <!-- End Video -->
 
-    <h3 class="text-center" style="color:#2256a0;position:inherit;" id="titleAdvertising"> <strong
+    <h5 class="text-center" style="color:#2256a0;position:inherit;" id="titleAdvertising"> <strong
         style="color: #2256a0">Productos
         Destacados</strong>
-    </h3>
+    </h5>
 
     <div id="itemsAdvertising" class="row">
 
@@ -180,7 +181,7 @@
               style="border: 0cm;background-color: white">
             </div>
             <img id="myImg" src="assets/Publicidad/{{publi.id_item_publicidad}}.jpg" style="width: 140px;height: 145px">
-            <h5>{{publi.descripcion_corta}}</h5>
+            <h6>{{publi.descripcion_corta}}</h6>
             <a class="btn btn-info" style="color: white"
               (click)="showModalAdvertising(publi, productsModaladvertising)">Ver
             </a>
@@ -268,6 +269,87 @@
           style="width:20px;height: 20px; "> Encuentre este
         producto en la seccion de vehiculos del Club. <img src="assets/star.png"
           style="width:20px;height: 20px; "></strong></div>
+
+  </div>
+</ng-template>
+<!-- End Modal Items advertising -->
+
+
+
+<!-- Modal Items advertising -->
+<ng-template #Modaladvertising style="border-radius: 10px">
+  <div class="modal-header">
+    <h5 class="modal-title" style="color: rgb(34, 86, 160)">
+      <img src="assets/star.png" style="width:20px;height: 20px; "> <strong>Oferta</strong> <img src="assets/star.png"
+        style="width:20px;height: 20px; ">
+    </h5>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal(Modaladvertising)">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body text-left">
+    <div class="align-items-center text-center" style=" display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;">
+      <img  src="assets/Publicidad/Arte/2.png" style="width: 30%;height:30%;">
+      <img src="assets/Publicidad/Arte/Bridgestone.png" style=" display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+      height: 50px;">
+      <img src="assets/Publicidad/Arte/Firestone.png" style=" display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+      height: 40px;">
+    </div>
+    <hr>
+    <div>
+      <h5> <strong>Descripción</strong></h5>
+      <p>Por la compra de un juego de 4 llantas ahorre $100.000 y pagando con su tarjeta de crédito PriceSmart Colpatria
+        reciba $100.000 de bono adicional.</p>
+      <p> Este bono aplica para un máximo de 2 juegos de llantas por socio activo, leer condiciones en la parte
+        inferior.</p>
+    </div>
+    <div> <strong>Vigencia:</strong> * Valido del 22 de noviembre al 23 de diciembre de 2019 *</div>
+    <hr>
+    <h5> <strong>Codiciones</strong></h5>
+    <p style="text-align: justify;">El bono es válido para comprar máximo dos juegos de llantas por membrecía PriceSmart
+      activa. Con tu tarjeta de
+      Crédito PriceSmart Colpatria solo puedes obtener un máximo de dos bonos. Por los $100.000 de bono adicional, la
+      compra debe realizarse en su totalidad con la Tarjeta de Crédito PriceSmart Colpatria y esta debe encontrarse al
+      día, activa y sin ningún bloqueo, este bono se aplicará al valor total de la compra por cada socio. El bono es
+      personal e intransferible. No es canjeable por dinero en efectivo u otros productos. Oferta limitada a
+      disponibilidad de inventario en cada Club PriceSmart. Llantas no disponibles en el Club de Menga, Cali. El precio
+      de las llantas incluye instalación, balanceo, rotaciones, y reparación de pinchaduras ofrecidos por PriceSmart. El
+      bono no es canjeable por dinero en efectivo u otros productos. Banco Colpatria no es vendedor, productor ni
+      proveedor de los productos ofrecidos por PriceSmart por lo que no es responsable por la calidad, idoneidad o
+      garantía de los mismos, cualquier reclamación debe realizarse exclusivamente en PriceSmart.</p>
+    <hr>
+
+  </div>
+</ng-template>
+<!-- End Modal Items advertising -->
+
+
+<!-- Modal Items advertising -->
+<ng-template #ModaladvertisingOne style="border-radius: 10px">
+  <div class="modal-header">
+    <h5 class="modal-title" style="color: rgb(34, 86, 160)">
+      <img src="assets/star.png" style="width:20px;height: 20px; "><strong>Oferta</strong> <img src="assets/star.png"
+        style="width:20px;height: 20px; ">
+    </h5>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal(ModaladvertisingOne)">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body text-left">
+    <div class="align-items-center text-center">
+      <img src="assets/Publicidad/Arte/1.jpg" style="max-width: 700px;" >
+
+    </div>
 
   </div>
 </ng-template>
