@@ -28,6 +28,9 @@ export class KtcSpanishComponent implements OnInit {
   publicidad = false;
   itemsPublicidad: any = [];
 
+  //ImageAdvertising
+  imageAdvertising:string;
+
   //Carousel
 
   myAdvertising: any = [];
@@ -283,7 +286,9 @@ export class KtcSpanishComponent implements OnInit {
 
 
     //Modal Product advertising
-    showModalAdvertisingOne(modal) {
+    showModalAdvertisingOne(modal, image) {
+
+      this.imageAdvertising = image;
 
       this.pauseTimer();
       this.timeLeft = 80;
